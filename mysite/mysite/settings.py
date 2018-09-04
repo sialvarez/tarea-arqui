@@ -25,7 +25,7 @@ SECRET_KEY = '+9c@pe$@8gla%($hd@fb1v^8j)5ejugqy4in!4)%b%=cgqm8d$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['18.223.180.104']
 
 
 # Application definition
@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      'ENGINE': 'django.db.backends.postgresql_psycopg2',
+      'NAME': 'comment',
+      'USER': 'sialvarez',
+      'PASSWORD': '123456',
+      'HOST': '0.0.0.0',
+      'PORT': 5432,
+      'CHARSET': 'UTF8',
     }
 }
 
