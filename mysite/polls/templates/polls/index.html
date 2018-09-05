@@ -29,6 +29,7 @@ textarea {
 
 <form action = "." method = "post">
 	{% csrf_token %}
+    <label for ="choice_text"> Ingrese un comentario </label>
 	<textarea type = "text" name = "choice_text"> </textarea>
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
