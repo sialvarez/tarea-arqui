@@ -32,7 +32,7 @@ textarea {
 {% if latest_comment_list %}
     <ul class = "no_bullet">
     {% for comment in latest_comment_list %}
-        <li class = "leaf" >{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
+        <img src="https://image.flaticon.com/icons/svg/61/61772.svg" alt="leaf" width="500" height="333">  <li class = "leaf" >{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
     {% endfor %}
     </ul>
 {% else %}
@@ -43,7 +43,7 @@ textarea {
 <form action = "." method = "post">
 	{% csrf_token %}
     <label for ="choice_text"> Insert a new commentary: </label>
-	<img src="https://image.flaticon.com/icons/svg/61/61772.svg" alt="leaf" width="500" height="333"> <textarea type = "text" name = "choice_text"> </textarea>
+	<textarea type = "text" name = "choice_text"> </textarea>
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
 </form>
