@@ -9,7 +9,6 @@ ul.no_bullet {
 }
 
 li.leaf {
-    background: url('/leaf_icon.jpg') no-repeat left top;
     height: 54px;
     padding-left: 44px;
     padding-top: 3px;
@@ -44,7 +43,7 @@ textarea {
 <form action = "." method = "post">
 	{% csrf_token %}
     <label for ="choice_text"> Insert a new commentary: </label>
-	<textarea type = "text" name = "choice_text"> </textarea>
+	<img src="leaf_icon.png" alt="leaf" width="500" height="333"> <textarea type = "text" name = "choice_text"> </textarea>
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
 </form>
