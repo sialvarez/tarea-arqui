@@ -59,7 +59,9 @@ textarea {
         <form action = "." method = "post">
         	{% csrf_token %}
             <label for ="choice_text"> Insert a new commentary: </label>
+            <br>
         	<textarea type = "text" name = "choice_text"> </textarea>
+            <br>
         	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
         	<input type = "submit" value = "Submit">
         </form>
