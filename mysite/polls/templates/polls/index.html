@@ -1,4 +1,7 @@
+<style>
 
+
+</style>
 
 
 {% if latest_comment_list %}
@@ -14,7 +17,7 @@
 
 <form action = "." method = "post">
 	{% csrf_token %}
-	<input type = "text" name = "choice_text">
+	<textarea type = "text" name = "choice_text">
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
 </form>
