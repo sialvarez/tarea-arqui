@@ -2,6 +2,20 @@
 
 <style>
 
+body {
+    background-color: #EEE;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  min-width: 600px;
+  max-width: 800px;
+
+  background-color: white;
+  padding: 40px;
+}
+
 ul.no_bullet {
     list-style-type: none;
     padding: 0;
@@ -28,23 +42,27 @@ textarea {
 }
 
 </style>
-
-<div>
-{% if latest_comment_list %}
-    <ul class = "no_bullet">
-    {% for comment in latest_comment_list %}
-        <img src="https://image.flaticon.com/icons/svg/61/61772.svg" alt="leaf" width="50" height="30">  <li class = "leaf" >{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>There are no commentaries</p>
-{% endif %}
+<body>
+<div id = "container">
+    <div>
+        {% if latest_comment_list %}
+            <ul class = "no_bullet">
+            {% for comment in latest_comment_list %}
+                <img src="https://image.flaticon.com/icons/svg/61/61772.svg" alt="leaf" width="50" height="30">  <li class = "leaf" >{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>There are no commentaries</p>
+        {% endif %}
+    </div>
+    <div>
+        <form action = "." method = "post">
+        	{% csrf_token %}
+            <label for ="choice_text"> Insert a new commentary: </label>
+        	<textarea type = "text" name = "choice_text"> </textarea>
+        	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
+        	<input type = "submit" value = "Submit">
+        </form>
+    </div>
 </div>
-
-<form action = "." method = "post">
-	{% csrf_token %}
-    <label for ="choice_text"> Insert a new commentary: </label>
-	<textarea type = "text" name = "choice_text"> </textarea>
-	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
-	<input type = "submit" value = "Submit">
-</form>
+</body>
