@@ -17,7 +17,7 @@
 
 <form action = "." method = "post">
 	{% csrf_token %}
-	<textarea> type = "text" name = "choice_text"</textarea>
+	<textarea type = "text" name = "choice_text"> </textarea>
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
 </form>
