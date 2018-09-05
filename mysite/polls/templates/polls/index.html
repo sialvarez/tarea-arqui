@@ -16,6 +16,10 @@ body {
   padding: 40px;
 }
 
+#center {
+    text-align: center;
+}
+
 ul.no_bullet {
     list-style-type: none;
     padding: 0;
@@ -27,6 +31,7 @@ li.leaf {
     padding-left: 44px;
     padding-top: 3px;
 }
+
 
 textarea {
     text-align: center;
@@ -55,7 +60,7 @@ textarea {
             <p>There are no commentaries</p>
         {% endif %}
     </div>
-    <div>
+    <div id = "center">
         <form action = "." method = "post">
         	{% csrf_token %}
             <label for ="choice_text"> Insert a new commentary: </label>
