@@ -1,8 +1,15 @@
-<style>
+
 
 <style>
-ul {
-    list-style-image: url("https://image.flaticon.com/icons/svg/61/61772.svg");
+
+ul.no_bullet {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+li.leaf {
+background: url('/images/leaf_icon.jpg') no-repeat left top;
 }
 
 textarea {
@@ -21,9 +28,9 @@ textarea {
 
 <div>
 {% if latest_comment_list %}
-    <ul>
+    <ul class = "no_bullet">
     {% for comment in latest_comment_list %}
-        <li>{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
+        <li class = "leaf" >{{ comment.choice_text }} {{ comment.date }} {{ comment.ip  }} </li>
     {% endfor %}
     </ul>
 {% else %}
