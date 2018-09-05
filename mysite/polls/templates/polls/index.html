@@ -1,5 +1,10 @@
 <style>
 
+<style>
+ul {
+    list-style: square inside url("sqpurple.gif");
+}
+</style>
 
 textarea {
     width: 100%;
@@ -15,7 +20,7 @@ textarea {
 
 </style>
 
-
+<div>
 {% if latest_comment_list %}
     <ul>
     {% for comment in latest_comment_list %}
@@ -23,13 +28,13 @@ textarea {
     {% endfor %}
     </ul>
 {% else %}
-    <p>No polls are available.</p>
+    <p>There are no commentaries</p>
 {% endif %}
-
+</div>
 
 <form action = "." method = "post">
 	{% csrf_token %}
-    <label for ="choice_text"> Ingrese un comentario </label>
+    <label for ="choice_text"> Insert a new commentary: </label>
 	<textarea type = "text" name = "choice_text"> </textarea>
 	<input type = "hidden" name = "ip" value = "{{ ip }}"> 
 	<input type = "submit" value = "Submit">
