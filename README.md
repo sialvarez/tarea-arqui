@@ -1,6 +1,6 @@
 # Tarea 1 - IIC2173
  
-#### Sebastián Nicolás Álvarez Velásquez 
+#### Sebastián Nicolás Álvarez Velásquez - 1362007J
 Las páginas principales que se utilizaron para la realización de esta tarea corresponden a:
 * https://docs.djangoproject.com/en/2.1/intro/tutorial01/
 * https://platzi.com/blog/django-aws/
