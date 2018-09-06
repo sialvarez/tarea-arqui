@@ -3,6 +3,7 @@
 #### Sebastián Nicolás Álvarez Velásquez - 1362007J
 Las páginas principales que se utilizaron para la realización de esta tarea corresponden a:
 * https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+* https://aws.amazon.com/getting-started
 * https://platzi.com/blog/django-aws/
 
 Respuestas encontradas en https://stackoverflow.com/ tales como:
